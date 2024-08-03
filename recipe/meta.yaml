@@ -1,5 +1,5 @@
 {% set name = "poetry-conda" %}
-{% set version = "0.1.1" %}
+{% set version = "0.1.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/poetry_conda-{{ version }}.tar.gz
-  sha256: cf9aff7d3c0d2f22938b87373d484c264ee7bc3699775cffa0109e124cc29290
+  sha256: 7e5170e2d5c503339824c94df65d36896c889c6e11407c8536b125a26b9a1bdc
 
 build:
   noarch: python
@@ -40,3 +40,4 @@ about:
 extra:
   recipe-maintainers:
     - rxm7706
+    - renan-r-santos
