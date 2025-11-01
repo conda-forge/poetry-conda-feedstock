@@ -1,5 +1,6 @@
 {% set name = "poetry-conda" %}
 {% set version = "0.1.7" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -16,11 +17,11 @@ build:
 
 requirements:
   host:
-    - python >=3.10,<4.0
+    - python {{ python_min }}
     - poetry-core
     - pip
   run:
-    - python >=3.10,<4.0
+    - python >={{ python_min }}
     - poetry >=1.5.0,<3
 
 test:
