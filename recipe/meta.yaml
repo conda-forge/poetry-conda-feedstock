@@ -1,5 +1,6 @@
 {% set name = "poetry-conda" %}
-{% set version = "0.1.4" %}
+{% set version = "0.1.7" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/poetry_conda-{{ version }}.tar.gz
-  sha256: b26e92e8d0af7510c36f99f0f3fafc982c8cd2b0eb7063e113b918afe7942fdb
+  sha256: 803f916d11f6fd8ff992d36a738e3d18877cc1b286a28c050ace7ec184910681
 
 build:
   noarch: python
@@ -20,7 +21,7 @@ requirements:
     - poetry-core
     - pip
   run:
-    - python >={{ python_min }},<4.0
+    - python >={{ python_min }}
     - poetry >=1.5.0,<3
 
 test:
